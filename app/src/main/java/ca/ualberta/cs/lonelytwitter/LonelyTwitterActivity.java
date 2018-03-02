@@ -29,6 +29,7 @@ public class LonelyTwitterActivity extends Activity {
 	private LonelyTwitterActivity activity = this;
 
 	private static final String FILENAME = "file.sav";
+	public static Tweet tweetMessage;
 	private EditText bodyText;
 	private ListView oldTweetsList;
 	private ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
@@ -74,7 +75,9 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 				Intent intent = new Intent(activity, EditTweetActivity.class);
+				tweetMessage = (Tweet) oldTweetsList.getItemAtPosition(i);
 				startActivity(intent);
+
 			}
 		});
 
