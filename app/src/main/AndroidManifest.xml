@@ -22,7 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditTweetActivity"></activity>
+        //LAB Refactoring
+        //XML
+        // - XML tag with an empty body
+        // - Empty body has no effect on the code but removal is necessary
+        //   to have good coding practices
+        // - Could lead to issues later in development, so it's best to just remove
+        <activity android:name=".EditTweetActivity"/>
     </application>
 
 </manifest>

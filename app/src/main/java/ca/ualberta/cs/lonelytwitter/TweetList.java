@@ -9,8 +9,12 @@ public class TweetList {
 
     }
 
-    public Tweet getTweet(int index){
-        return tweets.get(index);
+    //LAB Refactoring
+    //Declaration Redundancy
+    // - index always ends up being 0
+    // - Removal of variable and just input 0
+    public Tweet getTweet(){
+        return tweets.get(0);
     }
 
     public boolean hasTweet(Tweet tweet){

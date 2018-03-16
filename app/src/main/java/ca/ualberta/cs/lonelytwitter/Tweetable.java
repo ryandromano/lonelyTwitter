@@ -4,8 +4,14 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 public interface Tweetable {
-    public String getMessage();
+    //LAB Refactoring
+    //Code Style Issues
+    // - Removed the public modifier from "public String getMessage();" and
+    //   "public Date getDate();"
+    // - Since tweetable is an interface, the modifiers are not necessary and
+    //   can be removed without an issue.
+    String getMessage();
 
-    public Date getDate();
+    Date getDate();
 
 }
